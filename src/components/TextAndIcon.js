@@ -3,12 +3,17 @@ import React, { Component } from "react";
 class TextAndIcon extends Component {
   render() {
     return (
-      <div>
-        <h3>Malmö</h3>
-        <h3>Idag</h3>
-        <h1>20&deg;</h1>
-        <h4>8&deg;/22&deg;</h4>
-        <h2>Soligt</h2>
+      <div className="textAndIcon">
+        <div className="wsymb">
+          <img src={"images/" + this.props.wsymb + ".png"} />
+        </div>
+        <div className="textlager">
+          <h2 className="weatherPlace">Malmö</h2>
+          <p className="dagText">{this.props.dagText}</p>
+          <p className="dagsTemp">{this.props.tempNow}&deg;</p>
+          <p className="minMaxTemp">8&deg;/22&deg;</p>
+          <p className="weatherType">Soligt</p>
+        </div>
       </div>
     );
   }
