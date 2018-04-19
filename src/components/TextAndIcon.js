@@ -5,7 +5,7 @@ class TextAndIcon extends Component {
     return (
       <div className="textAndIcon">
         <div className="wsymb">
-          <img src={"images/" + this.props.wsymb + ".png"} />
+          <img src={"images/" + this.props.wsymb + ".png"} alt="" />
         </div>
         <div className="textlager">
           <h2 className="weatherPlace">Malmö</h2>

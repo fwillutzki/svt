@@ -9,10 +9,11 @@ class Day extends Component {
           wsymb={this.props.wsymb}
           tempNow={this.props.temperature}
           dagText={this.props.dagText}
+          temperatureData={this.props.temperatureDataDay}
         />
         <Diagrambox
           windData={this.props.windData}
-          temperatureData1={this.props.temperatureDataDay}
+          temperatureData={this.props.temperatureDataDay}
         />
       </div>
     );

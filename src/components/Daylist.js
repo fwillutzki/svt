@@ -11,7 +11,7 @@ class Daylist extends Component {
           dagText="Idag"
           temperature="11"
           temperatureDataDay={this.props.tempArrayDay1}
-          windData={this.props.windData}
+          windData={this.props.windDataIdag}
         />
         <Day
           daynr="2"
@@ -19,6 +19,7 @@ class Daylist extends Component {
           dagText="I morgon"
           temperature="19"
           temperatureDataDay={this.props.tempArrayDay2}
+          windData={this.props.windDataImorgon}
         />
         <Day
           daynr="3"
@@ -26,6 +27,7 @@ class Daylist extends Component {
           dagText="I &ouml;vermorgon"
           temperature="28"
           temperatureDataDay={this.props.tempArrayDay3}
+          windData={this.props.windDataOvermorgon}
         />
       </div>
     );

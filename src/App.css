@@ -37,7 +37,7 @@ body {
 }
 
 .dagsdiv {
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 .dagsTemp {
   font-size: 144px;
@@ -55,4 +55,9 @@ h2.weatherPlace,
 h2,
 p {
   margin: 0;
+}
+
+.diagramdiv {
+  width: 48%;
+  float: left;
 }
