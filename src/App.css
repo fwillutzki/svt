@@ -61,3 +61,9 @@ p {
   width: 48%;
   float: left;
 }
+.navbar {
+  text-align: center;
+}
+.navbar a {
+  padding: 10px;
+}

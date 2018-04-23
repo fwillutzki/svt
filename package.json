@@ -4,10 +4,14 @@
   "private": true,
   "dependencies": {
     "chart.js": "^2.7.2",
+    "prop-types": "^15.6.1",
+    "query-string": "^6.0.0",
     "react": "^16.3.1",
     "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "slug": "^0.9.1"
   },
   "scripts": {
     "start": "react-scripts start",

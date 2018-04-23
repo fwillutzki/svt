@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import "./App.css";
-import Daylist from "./components/Daylist";
+import Day from "./components/Day";
+import Navbar from "./components/Navbar";
+import Fourofour from "./components/Fourofour";
 
 class App extends Component {
   constructor(props) {
@@ -252,19 +256,54 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Daylist
-          tempArrayDay1={this.state.tempDiaOne}
-          tempArrayDay2={this.state.tempDiaTwo}
-          tempArrayDay3={this.state.tempDiaThree}
-          wsymbDayOne="1"
-          wsymbDayTwo="4"
-          wsymbDayThree="1"
-          windDataIdag={this.state.windDataIdag}
-          windDataImorgon={this.state.windDataImorgon}
-          windDataOvermorgon={this.state.windDataOvermorgon}
-        />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={props => (
+                <Day
+                  wsymb="1"
+                  daynr="1"
+                  dagtext="Idag"
+                  temperature="11"
+                  temperatureDataDay={this.state.tempDiaOne}
+                  windData={this.state.windDataIdag}
+                />
+              )}
+            />
+            <Route
+              path="/imorgon"
+              render={props => (
+                <Day
+                  wsymb="2"
+                  daynr="2"
+                  dagtext="Imorgon"
+                  temperature="19"
+                  temperatureDataDay={this.state.tempDiaTwo}
+                  windData={this.state.windDataImorgon}
+                />
+              )}
+            />
+            <Route
+              path="/overmorgon"
+              render={props => (
+                <Day
+                  wsymb="4"
+                  daynr="3"
+                  dagtext="I &ouml;vermorgon"
+                  temperature="23"
+                  temperatureDataDay={this.state.tempDiaThree}
+                  windData={this.state.windDataOvermorgon}
+                />
+              )}
+            />
+            <Route component={Fourofour} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
