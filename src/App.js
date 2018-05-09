@@ -261,7 +261,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route
-              path="/"
+              path = {process.env.PUBLIC_URL + "/"}
               exact
               render={props => (
                 <Day
@@ -275,7 +275,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/imorgon"
+              path = {process.env.PUBLIC_URL + "/imorgon"}
               render={props => (
                 <Day
                   wsymb="2"
@@ -288,7 +288,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/overmorgon"
+              path = {process.env.PUBLIC_URL + "/overmorgon"}
               render={props => (
                 <Day
                   wsymb="4"
