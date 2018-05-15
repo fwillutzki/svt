@@ -188,7 +188,10 @@ class App extends Component {
     const gustArrayOvermorgon = [];
     const lonMalmo = 13.087616;
     const latMalmo = 55.436559;
+    
     const url = `https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/${lonMalmo}/lat/${latMalmo}/data.json`;
+   
+    //const url = `http://api.texttv.nu/api/get/100`;
     fetch(url)
       .then(response => response.json())
       .then(json => {
@@ -268,7 +271,7 @@ class App extends Component {
                   wsymb="1"
                   daynr="1"
                   dagtext="Idag"
-                  temperature="11"
+                  temperature="fucking 1000"
                   temperatureDataDay={this.state.tempDiaOne}
                   windData={this.state.windDataIdag}
                 />
