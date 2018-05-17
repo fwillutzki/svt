@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './containers/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import './styles/App.css';
+import 'semantic-ui/dist/semantic.min.css';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
